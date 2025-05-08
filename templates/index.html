@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/assets/favicon.ico" type="image/x-icon">
+    <title>Multiplayer Tic Tac Toe</title>
+    <base href="../">
+    <link rel="stylesheet" href="../static/styles/styles.css">
+    <link rel="stylesheet" href="../static/styles/styles-design.css">
+    <link rel="stylesheet" href="../static/styles/styles-logs.css">
+    </head>
+<body>
+    <main>
+        <div class="greetings background show" id="greetingsBackground">
+            <div class="greetings-view show" id="greetings">
+                <div class="modal-header">
+                    <h3 id="label"></h3>
+                    </div>
+                <h1>XKNOT</h1>
+                <div class="horizontal-line"></div>
+                <div class="tictacImage">
+                    </div>
+                <form action="">
+                    <input type=text id="gameRoom" placeholder="Room Name" required="required">
+                    <br>
+                    <input type=text id="playerName" placeholder="Player Name" required="required">
+                    <button type="button" id="joinRoom">Join room</button>
+                </form>
+                <footer style="font-size: 0.7em; color: #555; margin-top: 15px;">
+                    <p>Developed by <a href="https://github.com/rfannn">Rfan</a></p>
+                    <p>Version <a href="https://github.com/rfannn/xknot/releases">1.0.0</a></p>
+                </footer>
+            </div>
+        </div>
+        <div class="board-logs-container">
+            <div class="game-board-area">
+                <div class="board" id="board">
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                </div>
+                <div class="winning-message" id="winningMessage">
+                    <div data-winning-message-text></div>
+                    <button id="restartButton">Restart</button>
+                </div>
+                <div class="game-board-area-button">
+                    <button id="gameStart">Start Game</button>
+                </div>
+            </div>
+            <div class="logs" id="logs-container">
+                <div class="messaging-view show" id="messaging">
+                    <div class="messaging-header" id="messaging-header">
+                        <div class="modal-header">
+                            <span class="modal-header-title">Game Arena</span>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="connected-players" id="connected_players">
+                            </div>
+                    </div>
+                    <div class="msg" id="msg-area">
+                        </div>
+                    <div class="logs message" id="log_msg">
+                        <form class="messaging" id="send_msg" method="POST" action="#" autocomplete="off">
+                            <input type=text id="message" placeholder="type message">
+                            <button type="submit" id="send">Send</button>
+                        </form>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.min.js"></script>
+    <script type="module" src="./static/scripts/main.js"></script>
+</body>
+</html>
